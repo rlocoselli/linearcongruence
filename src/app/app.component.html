@@ -1,6 +1,6 @@
-<h3>Linear Congruence</h3>
+<h3 class="h3">Linear Congruence</h3>
 
-<div *ngFor="let item of congruences">
+<div class="alert alert-dark" *ngFor="let item of congruences">
   <span>{{ item }} is congruent to {{ cong.divided }} mod {{ cong.divisor }} </span>
 </div>
 
@@ -10,19 +10,19 @@
     <label for="Divided">
       Divided
     </label>
-    <input [(ngModel)]="cong.divided" id="divided" type="number" name = "divided" required>
+    <input class="input-group-text" [(ngModel)]="cong.divided" id="divided" type="number" name = "divided" required>
   </div>
   <div>
     <label for="Divisor">
       Divisor
     </label>
-    <input [(ngModel)]="cong.divisor" id="divisor" type="number" name = "divisor" required>
+    <input class="input-group-text" [(ngModel)]="cong.divisor" id="divisor" type="number" name = "divisor" required>
   </div>
-
-  <div [hidden]="isValid">
+  <br>
+  <div [hidden]="isValid" class="alert alert-info" role="alert">
     You need to input a number different from zero to divisor and divided
   </div>
 
-  <button class="button" type="submit">Calculate 5 congruences</button>
+  <button class="btn btn-primary" type="submit">Calculate 5 next congruences</button>
 
 </form>
